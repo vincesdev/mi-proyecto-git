@@ -12,4 +12,5 @@ Este es mi primer repositorio donde aprendí a usar Git, GitHub y llaves SSH.
 * Cómo hacer commits y moverme en el tiempo.
 * Cómo conectar mi Mac con SSH.
 * Cómo usar ramas (branches).
+  
 ![Mi Gráfico de Git](./screenshot.png)
