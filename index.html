@@ -5,22 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Brigitte Vinces</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #fff; }
-        header { background: #24292e; color: white; padding: 2rem; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 2rem; }
-        .project-card { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; background: #fafafa; }
-        h2 { color: #0366d6; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
-        .badge { background: #e1ecf4; color: #39739d; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; }
-        .modo-oscuro {
-            background-color: #1a1a1b !important;
-            color: #ffffff !important;
+    :root {
+    --primary: #0366d6; /* Azul GitHub */   
+    --dark: #24292e;    /* Gris oscuro GitHub */
+    --light: #f6f8fa;   /* Gris muy claro GitHub */
+    --text: #2f363d;
 }
-        .modo-oscuro section, .modo-oscuro .project-card {
-            background-color: #2d2d2e !important;
-            color: #eee !important;
-            border-color: #444 !important;
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    margin: 0; 
+    color: var(--text); 
+    background-color: #fff; 
+    transition: background 0.3s, color 0.3s;
 }
+
+header { 
+    background: var(--dark); 
+    color: white; 
+    padding: 3rem 1rem; 
+    text-align: center; 
+    border-bottom: 5px solid var(--primary);
+}
+
+.container { max-width: 850px; margin: auto; padding: 2rem; }
+
+h2 { 
+    color: var(--primary); 
+    border-bottom: 2px solid var(--light); 
+    padding-bottom: 10px; 
+    margin-top: 2rem;
+}
+
+.project-card { 
+    border: 1px solid #e1e4e8; 
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    margin-bottom: 1.5rem; 
+    background: var(--light);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.badge { 
+    background: #def2ff; 
+    color: #0075ca; 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Estilo para los botones */
+button, .btn-link {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button:hover { background: #0256b9; }
+
+/* Ajuste para el Modo Oscuro */
+.modo-oscuro {
+    background-color: #0d1117 !important;
+    color: #c9d1d9 !important;
+}
+.modo-oscuro .project-card {
+    background-color: #161b22 !important;
+    border-color: #30363d !important;
+    color: #c9d1d9 !important;
+}
+.modo-oscuro h2 { border-color: #30363d; }
     </style>
 </head>
 <body>
@@ -80,12 +146,6 @@
     }
     </script>
 
-    <script>
-    function cambiarModo() {
-        // Esta línea le dice al cuerpo de la página que active o desactive el modo oscuro
-        document.body.classList.toggle("modo-oscuro");
-        console.log("Se cambió el estilo de la página");
-    }
-</script>
+    
 </body>
 </html>
