@@ -12,10 +12,21 @@
         h2 { color: #0366d6; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
         .badge { background: #e1ecf4; color: #39739d; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; }
+        .modo-oscuro {
+            background-color: #1a1a1b !important;
+            color: #ffffff !important;
+}
+        .modo-oscuro section, .modo-oscuro .project-card {
+            background-color: #2d2d2e !important;
+            color: #eee !important;
+            border-color: #444 !important;
+}
     </style>
 </head>
 <body>
-
+<button onclick="cambiarModo()" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px; cursor: pointer;">
+    🌓 Cambiar Color
+</button>
     <header>
         <h1>Brigitte Vinces</h1>
         <p>Desarrolladora Web en Formación | Git & GitHub Enthusiast</p>
@@ -68,5 +79,13 @@
         console.log("El botón fue presionado con éxito");
     }
     </script>
+
+    <script>
+    function cambiarModo() {
+        // Esta línea le dice al cuerpo de la página que active o desactive el modo oscuro
+        document.body.classList.toggle("modo-oscuro");
+        console.log("Se cambió el estilo de la página");
+    }
+</script>
 </body>
 </html>
